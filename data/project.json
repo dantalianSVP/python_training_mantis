@@ -1,0 +1,16 @@
+[
+  {
+    "py/object": "model.project.Project",
+    "description": "descriptionW",
+    "name": "Project_namePgW5HZ",
+    "status": "development",
+    "view_status": "private"
+  },
+  {
+    "py/object": "model.project.Project",
+    "description": "descriptionpMFQcy",
+    "name": "Project_nameRd",
+    "status": "release",
+    "view_status": "private"
+  }
+]
