@@ -33,11 +33,10 @@ class ProjectHelper:
     def fill_project_form(self, project):
         wd = self.app.wd
         self.change_field_value("name", project.name)
-        self.change_field_value("status", project.status)
-        self.change_field_value("view_state", project.view_state)
+        self.select_field_value("status", project.status)
+        self.select_field_value("view_state", project.view_status)
         self.change_field_value("description", project.description)
-        if not (wd.find_element_by_name("inherit_global").is_selected() == project.inherit):
-            wd.find_element_by_name("inherit_global").click()
+        wd.find_element_by_xpath("(//input[@value='Add Project'])").click()
 
     def select_field_value(self, select_param, select_value):
         wd = self.app.wd
