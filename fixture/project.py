@@ -51,3 +51,12 @@ class ProjectHelper:
         link = wd.find_element_by_link_text(name).get_attribute('href')
         id_project = link.split('=')[1]
         return id_project
+
+
+
+    def delete_project_by_index(self, name):
+        wd = self.app.wd
+        self.open_home_page()
+        wd.find_element_by_link_text(name).click()
+        wd.find_element_by_xpath("//input[@value='Delete Project']").click()
+        wd.find_element_by_xpath("//input[@value='Delete Project']").click()
