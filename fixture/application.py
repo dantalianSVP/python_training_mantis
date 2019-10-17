@@ -1,8 +1,10 @@
 from selenium import webdriver
 
 from fixture.james import JamesHelper
+from fixture.mail import MailHelper
 from fixture.session import SessionHelper
 from fixture.project import ProjectHelper
+from fixture.signup import SignupHelper
 
 
 class Application:
@@ -21,6 +23,8 @@ class Application:
         self.project = ProjectHelper(self)
         self.base_url = config['web']['baseUrl']
         self.config = config
+        self.mail = MailHelper(self)
+        self.signup = SignupHelper(self)
         self.james = JamesHelper(self)
 
     def is_valid(self):
