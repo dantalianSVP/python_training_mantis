@@ -22,5 +22,10 @@
     "port": "4555",
     "username": "root",
     "password": "root"
+  },
+  "soap": {
+    "host": "http://localhost/mantis/api/soap/mantisconnect.php?wsdl",
+    "username": "administrator",
+    "password": "root"
   }
 }
